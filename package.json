@@ -11,5 +11,17 @@
     "cat"
   ],
   "author": "Thai Thien",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ttpro1995/thecatapi-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ttpro1995/thecatapi-helper/issues"
+  },
+  "homepage": "https://github.com/ttpro1995/thecatapi-helper#readme",
+  "dependencies": {
+    "microtime": "^2.1.1",
+    "request": "^2.78.0"
+  }
 }
