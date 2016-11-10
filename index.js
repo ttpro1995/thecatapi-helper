@@ -25,7 +25,7 @@
 
 
 var thecatapi = {}
-thecatapi.linkbuilder = function(category, api_key, type = "jpg", size = "full"){
+thecatapi.linkbuilder = function(category, api_key, type, size){
 
   var baselink = "http://thecatapi.com/api/images/get?";
   var link = baselink;
@@ -36,6 +36,14 @@ thecatapi.linkbuilder = function(category, api_key, type = "jpg", size = "full")
 
   if (category !== undefined){
     link = link+ "&category="+category+"&";
+  }
+
+  if (type === undefined){
+    type = "jpg";
+  }
+
+  if (size === undefined){
+    size = "full";
   }
 
   var size_list = ["small", "med", "full"];
