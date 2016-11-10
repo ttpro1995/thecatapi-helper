@@ -1,4 +1,7 @@
 # TheCatAPI helper
+[![Build Status](https://travis-ci.org/ttpro1995/thecatapi-helper.svg?branch=master)](https://travis-ci.org/ttpro1995/thecatapi-helper)
+
+
 This node module provides you some help so you can enjoy cats.
 
 ## Installation
