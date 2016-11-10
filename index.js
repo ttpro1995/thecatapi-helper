@@ -6,15 +6,15 @@ var microtime = require('microtime')
 var thecatapi = {}
 thecatapi.linkbuilder = function(category, api_key, type = "jpg", size = "full"){
 
-  var baselink = "http://thecatapi.com/api/images/get";
+  var baselink = "http://thecatapi.com/api/images/get?";
   var link = baselink;
 
-  if (api_key !== "undefined"){
-    link = link + "?api_key="+api_key;
+  if (api_key !== undefined){
+    link = link + "api_key="+api_key;
   }
 
-  if (category !== "undefined"){
-    link = link+ "&category="+category;
+  if (category !== undefined){
+    link = link+ "&category="+category+"&";
   }
 
   var size_list = ["small", "med", "full"];
@@ -28,7 +28,7 @@ thecatapi.linkbuilder = function(category, api_key, type = "jpg", size = "full")
   }
 
   link = link +
-  "&type="+ type+
+  "type="+ type+
   "&size="+ size;
 
   return link;
