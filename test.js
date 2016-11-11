@@ -24,6 +24,7 @@
 //
 
 var thecatapi = require('./index.js')
+const assert = require('assert');
 
 // just an simple link with no api, no argument
 var simple_link = thecatapi.linkbuilder();
@@ -40,3 +41,17 @@ var very_customize_link3 = thecatapi.linkbuilder('caturday','MTM1MDM1','gif','sm
 console.log(very_customize_link1);
 console.log(very_customize_link2);
 console.log(very_customize_link3);
+
+assert.equal(simple_link, "http://thecatapi.com/api/images/get?type=jpg&size=full");
+assert.equal(normal_link, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full");
+assert.equal(very_customize_link1, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full");
+assert.equal(very_customize_link2, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=png&size=med");
+assert.equal(very_customize_link3, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=gif&size=small");
+
+/*
+http://thecatapi.com/api/images/get?type=jpg&size=full
+http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full
+http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full
+http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=png&size=med
+http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=gif&size=small
+*/

@@ -38,22 +38,12 @@ thecatapi.linkbuilder = function(category, api_key, type, size){
     link = link+ "&category="+category+"&";
   }
 
-  if (type === undefined){
+  if (size !== "small" && size !== "med" && size !=="full"){
+    size = "full";
+  }
+
+  if (type != "jpg" && type!= "png" && type!== "gif"){
     type = "jpg";
-  }
-
-  if (size === undefined){
-    size = "full";
-  }
-
-  var size_list = ["small", "med", "full"];
-  if (!size_list.includes(size)){
-    size = "full";
-  }
-
-  var type_list = ["jpg", "png", "gif"];
-  if (!type_list.includes(type)){
-    type = "jpg"
   }
 
   link = link +
