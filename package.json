@@ -1,6 +1,6 @@
 {
   "name": "thecatapi-helper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Helper function for TheCatAPI.com",
   "main": "index.js",
   "scripts": {
