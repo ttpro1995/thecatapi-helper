@@ -23,34 +23,32 @@
 //
 //
 
-
 var thecatapi = {}
-thecatapi.linkbuilder = function(category, apiKey, type, size){
+thecatapi.linkbuilder = function (category, apiKey, type, size) {
+  var baselink = 'http://thecatapi.com/api/images/get?'
+  var link = baselink
 
-  var baselink = "http://thecatapi.com/api/images/get?";
-  var link = baselink;
-
-  if (apiKey !== undefined){
-    link = link + "api_key="+apiKey;
+  if (apiKey !== undefined) {
+    link = link + 'api_key=' + apiKey
   }
 
-  if (category !== undefined){
-    link = link+ "&category="+category+"&";
+  if (category !== undefined) {
+    link = link + '&category=' + category + '&'
   }
 
-  if (size !== "small" && size !== "med" && size !=="full"){
-    size = "full";
+  if (size !== 'small' && size !== 'med' && size !== 'full') {
+    size = 'full'
   }
 
-  if (type != "jpg" && type!= "png" && type!== "gif"){
-    type = "jpg";
+  if (type !== 'jpg' && type !== 'png' && type !== 'gif') {
+    type = 'jpg'
   }
 
   link = link +
-  "type="+ type+
-  "&size="+ size;
+  'type=' + type +
+  '&size=' + size
 
-  return link;
+  return link
 }
 
-module.exports = thecatapi;
+module.exports = thecatapi
