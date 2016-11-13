@@ -25,13 +25,13 @@
 
 
 var thecatapi = {}
-thecatapi.linkbuilder = function(category, api_key, type, size){
+thecatapi.linkbuilder = function(category, apiKey, type, size){
 
   var baselink = "http://thecatapi.com/api/images/get?";
   var link = baselink;
 
-  if (api_key !== undefined){
-    link = link + "api_key="+api_key;
+  if (apiKey !== undefined){
+    link = link + "api_key="+apiKey;
   }
 
   if (category !== undefined){

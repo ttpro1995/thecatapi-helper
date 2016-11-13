@@ -27,26 +27,26 @@ var thecatapi = require('./index.js')
 const assert = require('assert');
 
 // just an simple link with no api, no argument
-var simple_link = thecatapi.linkbuilder();
-console.log(simple_link);
+var simpleLink = thecatapi.linkbuilder();
+console.log(simpleLink);
 
 // with category and api
-var normal_link = thecatapi.linkbuilder('caturday','MTM1MDM1');
-console.log(normal_link);
+var normalLink = thecatapi.linkbuilder('caturday','MTM1MDM1');
+console.log(normalLink);
 
 // link with category, api, file type ,size,
-var very_customize_link1 = thecatapi.linkbuilder('caturday','MTM1MDM1','jpg','full');
-var very_customize_link2 = thecatapi.linkbuilder('caturday','MTM1MDM1','png','med');
-var very_customize_link3 = thecatapi.linkbuilder('caturday','MTM1MDM1','gif','small');
-console.log(very_customize_link1);
-console.log(very_customize_link2);
-console.log(very_customize_link3);
+var customizeLink1 = thecatapi.linkbuilder('caturday','MTM1MDM1','jpg','full');
+var customizeLink2 = thecatapi.linkbuilder('caturday','MTM1MDM1','png','med');
+var customizeLink3 = thecatapi.linkbuilder('caturday','MTM1MDM1','gif','small');
+console.log(customizeLink1);
+console.log(customizeLink2);
+console.log(customizeLink3);
 
-assert.equal(simple_link, "http://thecatapi.com/api/images/get?type=jpg&size=full");
+assert.equal(simpleLink, "http://thecatapi.com/api/images/get?type=jpg&size=full");
 assert.equal(normal_link, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full");
-assert.equal(very_customize_link1, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full");
-assert.equal(very_customize_link2, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=png&size=med");
-assert.equal(very_customize_link3, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=gif&size=small");
+assert.equal(customizeLink1, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full");
+assert.equal(customizeLink2, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=png&size=med");
+assert.equal(customizeLink3, "http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=gif&size=small");
 
 /*
 http://thecatapi.com/api/images/get?type=jpg&size=full
