@@ -4,7 +4,7 @@
   "description": "Helper function for TheCatAPI.com",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "standard & node test.js"
   },
   "keywords": [
     "TheCatAPI",
@@ -20,5 +20,8 @@
     "url": "https://github.com/ttpro1995/thecatapi-helper/issues"
   },
   "homepage": "https://github.com/ttpro1995/thecatapi-helper#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "standard": "^8.5.0"
+  }
 }
