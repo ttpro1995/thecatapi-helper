@@ -28,14 +28,6 @@ thecatapi.linkbuilder = function (category, apiKey, type, size) {
   var baselink = 'http://thecatapi.com/api/images/get?'
   var link = baselink
 
-  if (apiKey !== undefined) {
-    link = link + 'api_key=' + apiKey
-  }
-
-  if (category !== undefined) {
-    link = link + '&category=' + category + '&'
-  }
-
   if (size !== 'small' && size !== 'med' && size !== 'full') {
     size = 'full'
   }
@@ -47,6 +39,14 @@ thecatapi.linkbuilder = function (category, apiKey, type, size) {
   link = link +
   'type=' + type +
   '&size=' + size
+
+  if (apiKey !== undefined) {
+    link = link + '&api_key=' + apiKey
+  }
+
+  if (category !== undefined && category !== null) {
+    link = link + '&category=' + category
+  }
 
   return link
 }

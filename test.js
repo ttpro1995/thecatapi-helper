@@ -29,6 +29,8 @@ const assert = require('assert')
 // just an simple link with no api, no argument
 var simpleLink = thecatapi.linkbuilder()
 console.log(simpleLink)
+var simpleLink2 = thecatapi.linkbuilder(null, 'MTM1MDM1')
+console.log(simpleLink2)
 
 // with category and api
 var normalLink = thecatapi.linkbuilder('caturday', 'MTM1MDM1')
@@ -43,10 +45,10 @@ console.log(customizeLink2)
 console.log(customizeLink3)
 
 assert.equal(simpleLink, 'http://thecatapi.com/api/images/get?type=jpg&size=full')
-assert.equal(normalLink, 'http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full')
-assert.equal(customizeLink1, 'http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=jpg&size=full')
-assert.equal(customizeLink2, 'http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=png&size=med')
-assert.equal(customizeLink3, 'http://thecatapi.com/api/images/get?api_key=MTM1MDM1&category=caturday&type=gif&size=small')
+assert.equal(normalLink, 'http://thecatapi.com/api/images/get?type=jpg&size=full&api_key=MTM1MDM1&category=caturday')
+assert.equal(customizeLink1, 'http://thecatapi.com/api/images/get?type=jpg&size=full&api_key=MTM1MDM1&category=caturday')
+assert.equal(customizeLink2, 'http://thecatapi.com/api/images/get?type=png&size=med&api_key=MTM1MDM1&category=caturday')
+assert.equal(customizeLink3, 'http://thecatapi.com/api/images/get?type=gif&size=small&api_key=MTM1MDM1&category=caturday')
 
 /*
 http://thecatapi.com/api/images/get?type=jpg&size=full
