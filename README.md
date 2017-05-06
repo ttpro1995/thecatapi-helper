@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/ttpro1995/thecatapi-helper.svg?branch=master)](https://travis-ci.org/ttpro1995/thecatapi-helper)
 [![Standard - JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 [![npm version](https://badge.fury.io/js/thecatapi-helper.svg)](https://badge.fury.io/js/thecatapi-helper)
+[![saythanks](https://img.shields.io/badge/say%20thank-!-blue.svg)](https://saythanks.io/to/ttpro1995)
+
 
 This node module provides you some help so you can enjoy cats.
 
