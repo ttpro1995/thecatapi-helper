@@ -36,9 +36,7 @@ thecatapi.linkbuilder = function (category, apiKey, type, size) {
     type = 'jpg'
   }
 
-  link = link +
-  'type=' + type +
-  '&size=' + size
+  link = link + 'type=' + type + '&size=' + size
 
   if (apiKey !== undefined) {
     link = link + '&api_key=' + apiKey
